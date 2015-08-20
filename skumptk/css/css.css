@@ -1,0 +1,39 @@
+.header {
+	background-color: #003366;
+}
+.header h2{
+	color: white;
+}
+.menu {
+	margin-top: 20px;
+}
+.menu h3{
+	padding-left: 20px;
+}
+.footer {
+	background-color: #003366;
+	padding: 15px;
+	color: white;
+}
+.layout {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 30px 15px;
+	color: inherit;
+	background-color: #E8E8E8 ;
+	border-top-color: #d5d5d5;
+}
+.layout h1 {
+	font-size: 50px;
+	font-style: bold;
+}
+.layout p {
+	font-size: 20px;
+}
+
+.judultabel{ 
+	background-color:#C0C0C0; 
+	font-weight:bold; 
+	font-size:14px; 
+	text-align:center; 
+} 
