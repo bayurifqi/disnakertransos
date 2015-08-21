@@ -1,7 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<?php include("lib_func.php"); ?>
+		<?php include("lib_func.php"); 
+		$link = koneksi_db();
+
+		?>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>SKUMPTK</title>
 		<!-- Bootstrap -->
@@ -38,7 +41,21 @@
           <div class="form-group">
                       <label for="nama" class="col-lg-2 control-label text-right">NIP</label>
                       <div class="col-lg-4">
-                        <input type="text" class="form-control" id="nip" name="nip" placeholder="NIP" maxlength=23>
+                        <select name="nip">
+	                      <?php 
+	                      $sql="SELECT * FROM t_identitas";
+	                      $res=mysql_query($sql,$link);
+	                      $banyakrecord=mysql_num_rows($res);
+	                      if($banyakrecord>0){
+	             
+	                        while($data=mysql_fetch_array($res)){
+	                            echo "<option value='$data[nip]'>$data[nip] - $data[nama]</option>";
+	                      
+	                        }
+	                        
+	                      }
+	                      ?>
+	                      </select>
                       </div>
                     </div>
         </div>
